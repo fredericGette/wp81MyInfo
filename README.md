@@ -17,8 +17,8 @@ The tile is updated:
 
 Launch the application once after installation to register the background task.
 
-![tile](capture001.png)  
-![application](capture002.png)
+![tile](Capture001.png)  
+![application](Capture002.png)
 
 ## Bluetooth address
 The application reads the address the same way as the driver QcBluetooth8930.sys:
