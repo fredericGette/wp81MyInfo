@@ -1,0 +1,38 @@
+<Page
+    x:Class="Wp81MyInfo.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Wp81MyInfo"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <StackPanel x:Name="PanelInfo" Margin="20,30,0,0">
+            <TextBlock HorizontalAlignment="Left" Text="Wp81 My Info" FontSize="36"/>
+            <TextBlock Text="Wi-Fi IP address" Margin="0,40,0,0" Style="{ThemeResource BaseTextBlockStyle}"/>
+            <TextBlock x:Name="TextBlockIp" Text="" FontSize="36" Margin="0,10,0,0" Foreground="{ThemeResource PhoneAccentBrush}"/>
+            <TextBlock Text="Bluetooth MAC address" Margin="0,30,0,0" Style="{ThemeResource BaseTextBlockStyle}"/>
+            <TextBlock x:Name="TextBlockBt" Text="" FontSize="36" Margin="0,10,0,0" Foreground="{ThemeResource PhoneAccentBrush}"/>
+            <TextBlock x:Name="TextBlockBtError" Text="" Margin="0,10,20,0" TextWrapping="Wrap" Visibility="Collapsed" Style="{ThemeResource BaseTextBlockStyle}"/>
+            <TextBlock x:Name="TextBlockUpdated" Text="" Margin="0,20,0,0" Style="{ThemeResource BaseTextBlockStyle}"/>
+        </StackPanel>
+        <StackPanel x:Name="PanelHelp" Margin="20,30,0,0" Visibility="Collapsed">
+            <TextBlock HorizontalAlignment="Left" Text="Wp81 My Info" FontSize="36"/>
+            <TextBlock Text="Display the IP address of the phone on its Wi-Fi network, and its Bluetooth MAC address." Margin="0,20,0,0" Style="{ThemeResource BaseTextBlockStyle}" />
+            <TextBlock Text="Pin the application to the Start screen: both addresses are displayed in the tile (medium and wide sizes), with the prefix IP: or BT:. The medium tile omits the colons of the Bluetooth address to keep it on one line." Margin="0,10,0,0" Style="{ThemeResource BaseTextBlockStyle}" />
+            <TextBlock Text="The tile is updated each time the network changes, and every 30 minutes. Launch the application once to activate these updates." Margin="0,10,0,0" Style="{ThemeResource BaseTextBlockStyle}" />
+            <TextBlock Text="If the tile is not updated, check that the application is allowed to run in the background (Settings > Battery saver)." Margin="0,10,0,0" Style="{ThemeResource BaseTextBlockStyle}" />
+            <TextBlock Text="v1.0.0 - 2026 - fredget" Margin="0,40,0,0" Style="{ThemeResource BaseTextBlockStyle}"/>
+        </StackPanel>
+    </Grid>
+
+    <Page.BottomAppBar>
+        <CommandBar>
+            <AppBarButton x:Name="RefreshAppBarButton" Tag="Refresh" Label="Refresh" Icon="Refresh" Click="AppBarButton_Click"/>
+            <CommandBar.SecondaryCommands>
+                <AppBarButton x:Name="HelpAppBarButton" Tag="Help" Label="Help" Icon="Help" Click="AppBarButton_Click"/>
+            </CommandBar.SecondaryCommands>
+        </CommandBar>
+    </Page.BottomAppBar>
+</Page>
